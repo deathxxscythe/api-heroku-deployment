@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "client/build")));
 app.use("/api/*", (_, res) => {
-  res.status(200).json({ message: "Its Working" });
+  res.status(200).json({ data: "Its Working" });
 });
 
 app.use("*", (_, res) => {
